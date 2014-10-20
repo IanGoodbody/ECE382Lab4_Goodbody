@@ -7,7 +7,7 @@ ECE382Lab4_Goodbody
 The following table provides a summary of different data types available in the MSP430 optimized C compiler
 
 |Size|Signed/Unsigned|Min Value|Max Value|
-|:-|:-|-:|-:|
+|:--|:--|--:|--:|
 |8-bit|Unsigned|Unsigned Char|0|255|
 |8-bit|Signed|Signed Char|-128|127|
 |16-bit|Unsigned|Unsigned Short|0|65,535|
@@ -21,7 +21,7 @@ Because the names of these different data types are rather unwieldy, C offers th
 type names. A summary is provided below
 
 |Type|Meaning|C typedef declaration|
-|:-|:-|:-|
+|:--|:--|:--|
 |int8|unsigned 8 bit value|`typedef unsigned char int8`|
 |sint8|signed 8 bit value|`typedef signed char sint8`|
 |int16|unsigned 16 bit value|`typedef unsigned short int16`|
@@ -87,7 +87,7 @@ Finally the Disassembler was used to study the `func()` function in the compiled
 the different function parameters.
 
 |Parameter|Value Sought|
-|:-|:-|
+|:--|:--|
 |Starting address of  `func()`|0xC2CC|
 |Ending address of  `func()`|0xC2D8|
 |Register holding  w|R12|
