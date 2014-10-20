@@ -37,7 +37,7 @@ The CSS debuging platform allows the developer to view the different variables, 
 involved in running a C program on the MSP430. For this section a sample of code labeled simpleLab4.c (shown below) 
 was analized.
 
-```objetive-c
+``` c
 #include <msp430g2553.h>
 
 typedef	unsigned short int16;
