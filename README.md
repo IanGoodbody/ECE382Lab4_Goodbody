@@ -6,8 +6,8 @@ ECE382Lab4_Goodbody
 ##### Data Types
 The following table provides a summary of different data types available in the MSP430 optimized C compiler
 
-|Size|Signed/Unsigned|Min Value|Max Value|
-|:--|:--|--:|--:|
+|Size|Signed/Unsigned|Type|Min Value|Max Value|
+|:--|:--|:--|--:|--:|
 |8-bit|Unsigned|Unsigned Char|0|255|
 |8-bit|Signed|Signed Char|-128|127|
 |16-bit|Unsigned|Unsigned Short|0|65,535|
