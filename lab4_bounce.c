@@ -2,8 +2,11 @@
  * lab4_bounce.c
  *
  *  Created on: Oct 21, 2014
- *      Author: C16Ian.Goodbody
- */
+ *      Author: C2C Ian Goodbody
+ *    Function: Implements the B functionality
+ * 		For this lab. Creates a single
+ * 		ball that bounces around the screen
+*/
 
 
 #include <msp430g2553.h>
@@ -26,12 +29,12 @@ void main()
 	init();
 	initNokia();
 	clearDisplay();
-	x = 3;
+	x = 3;			// Place the ball on the fourth pixel right and down
 	y = 3;
-	xVel = -1;
+	xVel = -1;		// Move the ball towards the top left corner
 	yVel = -1;
 
-	drawPattern(y, x, patternPtr, GHOST_WD);
+	drawPattern(y, x, patternPtr, GHOST_WD);	// Draw first image
 
 	while(1)
 	{
@@ -42,16 +45,18 @@ void main()
 			i--;
 		}
 
-		// Need to account for velocity direction in this to make it bounce right.
+		//Change direction if there is a collision and the ball is still moving towards the wall
 		if((x <= 0 && xVel < 0) || (x >= SCREEN_WIDTH-GHOST_WD && xVel > 0))
 			xVel *= -1;
 
 		if((y <= 0 && yVel < 0) || (y >= SCREEN_HEIGHT-8 && yVel > 0))
 			yVel *= -1;
 
+		// Move the ball
 		x += xVel;
 		y += yVel;
 
+		// Redraw
 		clearDisplay();
 		drawPattern(y, x, patternPtr, GHOST_WD); // Yay matlab style array indexing!!!
 	}
