@@ -174,7 +174,7 @@ Lastly, becasue the pong program was implemented with the same basic properties 
 program used the basic bounce header file as well as its own pong header for the additional functions and structs
 used in that software
 
-### Running Each program
+### Running Each Program
 
 Running the seperate functionalities requies the user to exclude the non necessary components from the build. For 
 whatever reason, the CSS software will not allow header files to be excluded but becasue they must be explicitly called by C files this does not present any particular problems.
@@ -184,4 +184,5 @@ whatever reason, the CSS software will not allow header files to be excluded but
 None
 
 <sup>1.</sup> I am intententionally avoiding the word objects to distinguish C from object oriented languages.
+
 <sup>2.</sup> The binary variable was a byte mapped 1 for TRUE and 0 for FALSE.
