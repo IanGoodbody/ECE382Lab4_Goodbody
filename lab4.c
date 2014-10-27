@@ -1,3 +1,13 @@
+/*
+* lab4_bounce.c
+*
+* 
+* Author: C2C Ian Goodbody
+* Function: Implements the basic functionality
+* For this lab. Creates an etch-a-sketch program
+* that writes multiple colors to the screen
+*/
+
 #include <msp430g2553.h>
 
 extern void init();
@@ -8,7 +18,7 @@ extern void drawBlock(unsigned char row, unsigned char col, unsigned char colore
 #define		TRUE			1
 #define		FALSE			0
 #define 	BLACK			0xFF
-#define 	White			0x00
+#define 	WHITE			0x00
 #define		UP_BUTTON		(P2IN & BIT5)
 #define		DOWN_BUTTON		(P2IN & BIT4)
 #define		AUX_BUTTON		(P2IN & BIT3)
@@ -55,12 +65,12 @@ void main() {
 			else if (AUX_BUTTON == 0)
 			{
 				while (AUX_BUTTON == 0);
-				color = ~color;
+				color = ~color;		// Inverts the color, only works with white/black functionality
 			}
 
 			if (button_press) {
 				button_press = FALSE;
-				drawBlock(y,x, color);
+				drawBlock(y,x, color); // Do not clear screen on redraw
 			}
 		}
 }
